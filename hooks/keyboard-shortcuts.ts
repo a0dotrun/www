@@ -28,7 +28,7 @@ export const useKeyboardShortcut = ({ handlers, preventDefault = true }: UseKeyb
 
       const key = event.key.toLowerCase();
       const handler = handlers.find(h => h.key.toLowerCase() === key);
-      
+
       if (handler) {
         if (preventDefault) {
           event.preventDefault();

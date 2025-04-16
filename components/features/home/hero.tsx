@@ -5,17 +5,16 @@ import { useScramble } from "use-scramble";
 export const Hero = () => {
   return (
     <div className="max-w-xl py-5">
-      <h1 className="text-5xl font-bold mb-4 cursor-default h-[80px] sm:h-auto">
+      <h1 className="text-5xl font-bold mb-4 cursor-default">
         <span className="inline-block">
           <ScrambleText
-            text="make MCP ship."
+            text="make mcp ship."
             className="whitespace-pre-wrap md:whitespace-nowrap"
           />
         </span>
       </h1>
-      <p className="text-sm">
-        basecase writes the first check to builders who are still dreaming,
-        tinkering, and exploring what they want to create.
+      <p className="text-lg">
+        a0 is model context protocol registry, build and deployment platform.
       </p>
     </div>
   );

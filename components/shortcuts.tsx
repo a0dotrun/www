@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Keyboard } from "lucide-react";
 import Draggable from "react-draggable";
-import { useKeyboardShortcut } from '../hooks/keyboard-shortcuts';
+import { useKeyboardShortcut } from '@/hooks/keyboard-shortcuts';
 
 interface ShortcutsProps {
   onClose?: () => void;
@@ -59,7 +59,7 @@ export const Shortcuts: React.FC<ShortcutsProps> = ({
 }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const nodeRef = useRef(null);
+  const nodeRef = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
   const contentRef = useRef<HTMLDivElement>(null);
 
   useKeyboardShortcut({

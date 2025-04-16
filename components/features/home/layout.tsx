@@ -1,7 +1,7 @@
 "use client";
 
-import Navigation from "./nav";
-import Footer from "./footer";
+import Navigation from "@/components/features/commons/nav";
+import Footer from "@/components/footer";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
