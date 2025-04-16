@@ -8,7 +8,6 @@ import { Gamepad, GitCommit, Keyboard } from "lucide-react";
 import { useKeyboardShortcut } from "../hooks/keyboard-shortcuts";
 import Shortcuts from "./shortcuts";
 import Link from "next/link";
-import { GridToggle } from "./grid-toggle";
 
 export default function Navigation() {
   const [showGit, setShowGit] = useState(false);
@@ -100,7 +99,6 @@ export default function Navigation() {
               </div>
             </div>
             <div className="flex items-center space-x-2">
-              <GridToggle />
               <ColorSwitcher />
               <ThemeSwitcher />
               <button

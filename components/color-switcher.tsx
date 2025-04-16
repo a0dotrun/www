@@ -23,7 +23,7 @@ export function ColorSwitcher() {
     root.style.setProperty("--color-secondary", colors.secondary);
     root.style.setProperty("--color-background-light", colors.light);
     root.style.setProperty("--color-background-dark", colors.dark);
-    
+
     localStorage.setItem("theme-color", color);
   }, []);
 
