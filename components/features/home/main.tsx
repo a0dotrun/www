@@ -1,21 +1,16 @@
-"use client";
-
 import { Hero } from "@/components/features/home/hero";
-import { About } from "../../about";
-import { Portfolio } from "../../portfolio";
-import { Quotes } from "../../quotes";
-import CTA from "../../cta";
+import { XMessageDM } from "@/components/features/home/x-dm-link";
 import { WaitlistForm } from "@/components/features/home/waitlist";
+
+// import { Portfolio } from "../../portfolio";
+// import { Quotes } from "../../quotes";
 
 export default function HomePage() {
   return (
     <div className="mx-auto">
       <Hero />
       <WaitlistForm />
-      <About />
-      <Portfolio />
-      <Quotes />
-      <CTA />
+      <XMessageDM />
     </div>
   );
 }

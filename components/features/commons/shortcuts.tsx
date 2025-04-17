@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Keyboard } from "lucide-react";
 import Draggable from "react-draggable";
-import { useKeyboardShortcut } from '@/hooks/keyboard-shortcuts';
+import { useKeyboardShortcut } from "@/hooks/keyboard-shortcuts";
 
 interface ShortcutsProps {
   onClose?: () => void;
@@ -25,7 +25,7 @@ const shortcutGroups: ShortcutGroup[] = [
       { key: "k", description: "scroll up" },
       { key: "n", description: "next quote" },
       { key: "p", description: "previous quote" },
-    ]
+    ],
   },
   {
     name: "windows",
@@ -34,22 +34,15 @@ const shortcutGroups: ShortcutGroup[] = [
       { key: "m", description: "toggle minimize window" },
       { key: "f", description: "toggle fullscreen window" },
       { key: "x", description: "show keyboard shortcuts" },
-    ]
+    ],
   },
   {
     name: "theme",
     shortcuts: [
       { key: "d", description: "toggle dark mode" },
       { key: "l", description: "toggle portfolio list" },
-      { key: "1", description: "red theme" },
-      { key: "2", description: "pink theme" },
-      { key: "3", description: "orange theme" },
-      { key: "4", description: "yellow theme" },
-      { key: "5", description: "green theme" },
-      { key: "6", description: "blue theme" },
-      { key: "7", description: "purple theme" },
-    ]
-  }
+    ],
+  },
 ];
 
 export const Shortcuts: React.FC<ShortcutsProps> = ({
@@ -59,45 +52,47 @@ export const Shortcuts: React.FC<ShortcutsProps> = ({
 }) => {
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
-  const nodeRef = useRef<HTMLDivElement>(null) as React.RefObject<HTMLDivElement>;
+  const nodeRef = useRef<HTMLDivElement>(
+    null,
+  ) as React.RefObject<HTMLDivElement>;
   const contentRef = useRef<HTMLDivElement>(null);
 
   useKeyboardShortcut({
     handlers: [
       {
-        key: 'Escape',
+        key: "Escape",
         handler: () => {
           if (onClose) {
             onClose();
           }
         },
-        description: 'Close shortcuts'
+        description: "Close shortcuts",
       },
       {
-        key: 'm',
+        key: "m",
         handler: () => onMinimize(!isMinimized),
-        description: 'Toggle minimize window'
+        description: "Toggle minimize window",
       },
       {
-        key: 'f',
-        handler: () => setIsFullscreen(prev => !prev),
-        description: 'Toggle fullscreen'
+        key: "f",
+        handler: () => setIsFullscreen((prev) => !prev),
+        description: "Toggle fullscreen",
       },
       {
-        key: 'j',
+        key: "j",
         handler: () => {
-          contentRef.current?.scrollBy({ top: 100, behavior: 'smooth' });
+          contentRef.current?.scrollBy({ top: 100, behavior: "smooth" });
         },
-        description: 'Scroll down'
+        description: "Scroll down",
       },
       {
-        key: 'k',
+        key: "k",
         handler: () => {
-          contentRef.current?.scrollBy({ top: -100, behavior: 'smooth' });
+          contentRef.current?.scrollBy({ top: -100, behavior: "smooth" });
         },
-        description: 'Scroll up'
-      }
-    ]
+        description: "Scroll up",
+      },
+    ],
   });
 
   const handleClickOutside = (e: React.MouseEvent) => {
@@ -135,10 +130,9 @@ export const Shortcuts: React.FC<ShortcutsProps> = ({
           ref={nodeRef}
           className={`
             ${isFullscreen ? "fixed inset-4" : "w-[750px] h-[500px]"}
-            [background-color:var(--color-background-light)]
-            dark:[background-color:var(--color-background-dark)]
             flex flex-col
             border border-gray-300 dark:border-gray-700
+            bg-background
           `}
         >
           <div className="flex items-center justify-between border-b border-gray-300 dark:border-gray-700 p-2 drag-handle cursor-grab active:cursor-grabbing">
@@ -176,7 +170,10 @@ export const Shortcuts: React.FC<ShortcutsProps> = ({
                 </h3>
                 <div className="grid grid-cols-2 gap-2">
                   {group.shortcuts.map((shortcut, idx) => (
-                    <div key={idx} className="flex items-center gap-3 font-mono text-xs">
+                    <div
+                      key={idx}
+                      className="flex items-center gap-3 font-mono text-xs"
+                    >
                       <kbd className="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded border border-gray-300 dark:border-gray-700">
                         {shortcut.key}
                       </kbd>

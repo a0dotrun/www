@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from "react";
 
 type KeyHandler = {
   key: string;
@@ -12,7 +12,10 @@ interface UseKeyboardShortcutOptions {
   preventDefault?: boolean;
 }
 
-export const useKeyboardShortcut = ({ handlers, preventDefault = true }: UseKeyboardShortcutOptions) => {
+export const useKeyboardShortcut = ({
+  handlers,
+  preventDefault = true,
+}: UseKeyboardShortcutOptions) => {
   useEffect(() => {
     const handleKeyPress = (event: KeyboardEvent) => {
       // Skip if typing in input/textarea or using modifier keys
@@ -27,7 +30,7 @@ export const useKeyboardShortcut = ({ handlers, preventDefault = true }: UseKeyb
       }
 
       const key = event.key.toLowerCase();
-      const handler = handlers.find(h => h.key.toLowerCase() === key);
+      const handler = handlers.find((h) => h.key.toLowerCase() === key);
 
       if (handler) {
         if (preventDefault) {
@@ -37,7 +40,7 @@ export const useKeyboardShortcut = ({ handlers, preventDefault = true }: UseKeyb
       }
     };
 
-    window.addEventListener('keydown', handleKeyPress);
-    return () => window.removeEventListener('keydown', handleKeyPress);
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
   }, [handlers, preventDefault]);
 };
