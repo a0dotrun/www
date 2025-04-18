@@ -239,8 +239,8 @@ export const Portfolio = () => {
             }`}
             style={{
               top: `${(row * 100) / rows}%`,
-              left: col === 0 ? '0%' : 
-                    col === horizontalPoints - 1 ? '100%' : 
+              left: col === 0 ? '0%' :
+                    col === horizontalPoints - 1 ? '100%' :
                     `${(col * 100) / 4}%`,
               transform: 'translate(-50%, -50%)'
             }}
@@ -259,7 +259,7 @@ export const Portfolio = () => {
       <div className={`flex justify-between items-center mb-8`}>
         <h2 className="text-lg font-bold cursor-default">
           early partner to{" "}
-          <span 
+          <span
             className={`inline-block transition-all duration-500 ${
               isIconicHovered ? 'scale-110' : 'scale-100'
             }`}
@@ -272,7 +272,7 @@ export const Portfolio = () => {
         </h2>
           <button
             onClick={toggleView}
-            className="hidden md:block text-sm p-2 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors [background-color:var(--color-background-light)] dark:[background-color:var(--color-background-dark)]"
+            className="hidden md:block text-sm p-2 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors  "
           >
             {isGridView ? '[l] list view' : '[l] logo view'}
           </button>
@@ -287,9 +287,9 @@ export const Portfolio = () => {
                 {renderGridIntersections()}
               </div>
             )}
-            
+
             {/* List view - show on mobile OR when list view is selected */}
-            <div 
+            <div
               className={`flex flex-col ${isGridView ? 'md:hidden' : ''}`}
               style={{ height: totalHeight }}
             >
@@ -317,8 +317,8 @@ export const Portfolio = () => {
                       </span>
                       <span className="hidden md:inline">
                         {hoveredIndex === index ? (
-                          <ScrambleText 
-                            text={client.title === "diagram" ? "diagram.com" : getDomainFromUrl(client.url)} 
+                          <ScrambleText
+                            text={client.title === "diagram" ? "diagram.com" : getDomainFromUrl(client.url)}
                             className="text-sm underline text-[var(--color-primary)]"
                           />
                         ) : (
@@ -340,7 +340,7 @@ export const Portfolio = () => {
 
             {/* Grid view - only show on md and up when grid view is selected */}
             {isGridView && (
-              <div 
+              <div
                 className="hidden md:grid md:grid-cols-4"
                 style={{ height: totalHeight }}
               >
@@ -361,7 +361,7 @@ export const Portfolio = () => {
                         alt=""
                         className="h-8 w-auto object-contain group-hover:opacity-0 transition-opacity dark:invert hidden md:block"
                       />
-                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center text-center hidden md:flex">
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity flex-col items-center justify-center text-center hidden md:flex">
                         {hoveredIndex === index ? (
                           <>
                             <ScrambleText text={client.title} className="text-2xl font-bold tracking-wide font-geist" />

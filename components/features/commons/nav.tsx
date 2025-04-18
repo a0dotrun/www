@@ -44,7 +44,7 @@ export default function Navigation() {
         name="terminal-description"
         content="Use W/T/G/S keyboard shortcuts to navigate"
       />
-      <nav className="w-full sticky top-0 z-50 mb-10">
+      <nav className="w-full sticky top-0 z-50 mb-10 backdrop-blur-sm">
         <div className="px-4 max-w-4xl mx-auto">
           <div className="flex justify-between items-center py-4 sm:py-6">
             <div className="flex items-center space-x-2">
@@ -56,7 +56,7 @@ export default function Navigation() {
               </Link>
               <Link
                 href="/blog"
-                className="md:flex p-2 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 [background-color:var(--color-background-light)] dark:[background-color:var(--color-background-dark)] inline-flex items-center sm:text-xs text-sm sm:h-auto h-12"
+                className="md:flex p-2 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600   inline-flex items-center sm:text-xs text-sm sm:h-auto h-12"
               >
                 [b] blog
               </Link>
@@ -82,7 +82,7 @@ export default function Navigation() {
               <ThemeSwitcher />
               <button
                 onClick={() => setShowShortcuts(true)}
-                className="hidden md:flex rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 py-2 px-4 [background-color:var(--color-background-light)] dark:[background-color:var(--color-background-dark)]"
+                className="hidden md:flex rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 py-2 px-4  "
               >
                 <Keyboard className="w-4 h-4 text-gray-500" />
               </button>
@@ -106,7 +106,7 @@ export default function Navigation() {
               className="cursor-pointer"
               onClick={() => setMinimizedShortcuts(false)}
             >
-              <div className="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 py-2 px-4 [background-color:var(--color-background-light)] dark:[background-color:var(--color-background-dark)]">
+              <div className="flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 py-2 px-4  ">
                 <Keyboard className="w-4 h-4 text-gray-500" />
                 <span className="font-mono text-sm">keyboard shortcuts</span>
               </div>

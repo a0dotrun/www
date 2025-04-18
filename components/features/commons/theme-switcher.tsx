@@ -35,7 +35,7 @@ export function ThemeSwitcher() {
   if (!mounted) return null;
 
   return (
-    <div className="p-1 sm:h-auto h-12 flex items-center rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600 [background-color:var(--color-background-light)] dark:[background-color:var(--color-background-dark)]">
+    <div className="p-1 sm:h-auto h-12 flex items-center rounded-lg border border-gray-200 dark:border-gray-800 hover:border-gray-300 dark:hover:border-gray-600  ">
       <button
         onClick={() => handleThemeChange("light")}
         className={`rounded-md p-2 sm:p-1 transition-colors ${
