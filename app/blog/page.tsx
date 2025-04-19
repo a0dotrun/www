@@ -1,20 +1,20 @@
-import Link from "next/link";
 import Layout from "@/components/features/commons/layout";
-import { getAllPosts } from "@/lib/blog";
 import { ScrambleText } from "@/components/features/commons/scramble-text";
-// import { baseMetadata } from "@/config/metadata";
+import { baseMetadata } from "@/config/metadata";
+import { getAllPosts } from "@/lib/blog";
 import { Metadata } from "next";
+import Link from "next/link";
 
-// export const metadata: Metadata = {
-//   ...baseMetadata,
-//   title: `${(baseMetadata.title as { default: string }).default} | blog`,
-//   description: 'some learnings from building and breaking things.',
-//   openGraph: {
-//     ...baseMetadata.openGraph,
-//     title: 'blog',
-//     description: 'some learnings from building and breaking things.',
-//   }
-// }
+export const metadata: Metadata = {
+  ...baseMetadata,
+  title: `${(baseMetadata.title as { default: string }).default} | blog`,
+  description: "some learnings from building and breaking things.",
+  openGraph: {
+    ...baseMetadata.openGraph,
+    title: "blog",
+    description: "some learnings from building and breaking things.",
+  },
+};
 
 export default async function BlogPage() {
   try {
