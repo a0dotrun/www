@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 type VideoProps = {
   src: string;
@@ -17,15 +17,15 @@ export default function EmbeddedVideo({
   loop,
   muted,
   playsInline,
-  width = '100%',
+  width = "100%",
 }: VideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const video = videoRef.current;
     if (video && autoPlay) {
-      video.play().catch(error => {
-        console.log('Autoplay prevented:', error);
+      video.play().catch((error) => {
+        console.log("Autoplay prevented:", error);
       });
     }
   }, [autoPlay]);

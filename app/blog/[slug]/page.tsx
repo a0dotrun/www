@@ -1,4 +1,3 @@
-import CopyButton from "@/components/copy-button";
 import Layout from "@/components/features/commons/layout";
 import TweetHydrator from "@/components/tweet-hydrator";
 import VideoHydrator from "@/components/video-hydrator";
@@ -57,7 +56,6 @@ export default async function BlogPost({ params }: Props) {
 
   return (
     <Layout>
-      <CopyButton />
       <article className="py-5">
         <h1 className="text-3xl font-bold mb-4 lowercase">{post.title}</h1>
         <div className="mb-8 text-sm">

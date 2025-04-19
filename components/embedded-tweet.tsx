@@ -80,7 +80,7 @@ export default function EmbeddedTweet({
             <div className="flex items-center gap-1">
               <Link
                 href={`https://twitter.com/${handle}`}
-                className="text-gray-900 dark:text-white font-bold hover:underline [&]:text-black [&]:dark:text-white [&]:no-underline"
+                className="text-black dark:text-white font-bold hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -114,7 +114,7 @@ export default function EmbeddedTweet({
           <div className="flex items-center gap-6 pt-4 text-muted-foreground">
             <Link
               href={url}
-              className="flex items-center gap-2 hover:text-foreground no-underline text-muted-foreground [&]:text-muted-foreground [&]:no-underline [&]:hover:text-foreground"
+              className="flex items-center gap-2 hover:text-foreground"
               aria-label="Reply"
               target="_blank"
               rel="noopener noreferrer"
@@ -144,7 +144,7 @@ export default function EmbeddedTweet({
             </button>
             <Link
               href={url}
-              className="hidden sm:flex items-center gap-2 hover:text-foreground ml-auto no-underline text-muted-foreground [&]:text-muted-foreground [&]:no-underline [&]:hover:text-foreground"
+              className="hidden sm:flex items-center gap-2 hover:text-foreground ml-auto"
               aria-label="Share"
               target="_blank"
               rel="noopener noreferrer"
