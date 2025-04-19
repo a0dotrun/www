@@ -5,7 +5,7 @@ export function XMessageDM() {
     <div className="py-5">
       <h2 className="text-md">
         <a
-          href="https://twitter.com/messages"
+          href="https://twitter.com/messages/compose?recipient_id=2832155198"
           target="_blank"
           rel="noopener noreferrer"
         >
